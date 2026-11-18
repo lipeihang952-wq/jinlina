@@ -12,6 +12,8 @@
   const hasGSAP = !!(window.gsap && window.ScrollTrigger);
   if (!hasGSAP) root.classList.remove('js');
   else gsap.registerPlugin(ScrollTrigger);
+  // 发布为 Claude 页面时：内容始终可见，动画只做位移，不先隐藏
+  const ARTIFACT = !!window.JLN_ARTIFACT;
 
   /* ---------------- 工具 ---------------- */
   const $ = (s, r = document) => r.querySelector(s);
@@ -255,6 +257,7 @@
   let darkroom = null;
   function heroIntro() {
     if (!hasGSAP || reduce) return;
+    if (ARTIFACT) { setTimeout(() => darkroom && darkroom.demo(), 900); return; }
     const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
     tl.from('.hn-c > span', { yPercent: 115, duration: 1.5, stagger: 0.1 }, 0.25)
       .from('.hp-frame', { clipPath: 'inset(100% 0% 0% 0%)', duration: 1.5, clearProps: 'clipPath' }, 0.15)
@@ -886,7 +889,8 @@
       const url = drawCard(Array.from(text).slice(0, MAX), name);
       const res = $('#pcResult');
       $('#pcImg').src = url;
-      $('#pcDownload').href = url;
+      const dl = $('#pcDownload');
+      if (dl) dl.href = url;
       res.hidden = false;
       clapSound();
       if (hasGSAP && !reduce) gsap.from(res, { y: 30, opacity: 0, duration: 0.8, ease: 'expo.out' });
@@ -1133,13 +1137,16 @@
    * ========================================================= */
   function initReveals() {
     if (!hasGSAP || reduce) { $$('[data-anim]').forEach((el) => { el.style.opacity = '1'; el.style.transform = 'none'; }); return; }
+    const fade = ARTIFACT ? {} : { opacity: 0 };
     ScrollTrigger.batch('[data-anim]', {
       start: 'top 90%', once: true,
-      onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0, duration: 1.1, ease: 'expo.out', stagger: 0.08, overwrite: true }),
+      onEnter: (batch) => (ARTIFACT
+        ? gsap.from(batch, { y: 28, duration: 1, ease: 'expo.out', stagger: 0.08, overwrite: true })
+        : gsap.to(batch, { opacity: 1, y: 0, duration: 1.1, ease: 'expo.out', stagger: 0.08, overwrite: true })),
     });
-    gsap.from('.ft-big', { yPercent: 35, opacity: 0, duration: 1.5, ease: 'expo.out', scrollTrigger: { trigger: '.footer', start: 'top 85%' } });
-    gsap.from('.frame', { y: 60, opacity: 0, duration: 1.1, ease: 'expo.out', stagger: 0.06, scrollTrigger: { trigger: '#works', start: 'top 75%' } });
-    gsap.from('.role-panel', { y: 70, opacity: 0, duration: 1.2, ease: 'expo.out', stagger: 0.08, scrollTrigger: { trigger: '#rolesPanels', start: 'top 85%' } });
+    gsap.from('.ft-big', { yPercent: 35, ...fade, duration: 1.5, ease: 'expo.out', scrollTrigger: { trigger: '.footer', start: 'top 85%' } });
+    gsap.from('.frame', { y: 60, ...fade, duration: 1.1, ease: 'expo.out', stagger: 0.06, scrollTrigger: { trigger: '#works', start: 'top 75%' } });
+    gsap.from('.role-panel', { y: 70, ...fade, duration: 1.2, ease: 'expo.out', stagger: 0.08, scrollTrigger: { trigger: '#rolesPanels', start: 'top 85%' } });
   }
 
   /* ---------------- 启动 ---------------- */
