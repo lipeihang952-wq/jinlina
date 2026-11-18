@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>金丽娜 · 纪录片导演 · 记者 · 作家</title>
+<meta name="description" content="金丽娜，CCTV-7《军事纪实》纪录片编导、主编。代表作《永远的雷锋》《走边关——内蒙古段》《“狐狸山”上的青春》，著有散文集《因为爱情》，执导教育公益电影《微风吹过“撒欢谷”》。">
+<meta name="theme-color" content="#0f0d0b">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="金丽娜 · 纪录片导演 · 记者 · 作家">
+<meta property="og:description" content="在边防线上拍下坚守，也在稿纸上写下爱情。">
+<meta property="og:image" content="images/launch-2023.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c9a063'/%3E%3Ctext x='32' y='45' font-size='36' font-weight='700' text-anchor='middle' fill='%230f0d0b' font-family='serif'%3E%E9%87%91%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/serif-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/vendor/lenis.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ============ 片头：冲洗胶片 ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="ld-seal"><span>金</span><span>丽</span><span>娜</span></div>
+  <p class="ld-cap">正在冲洗胶片 <b id="ldNum">0</b>%</p>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"><em id="cursorLabel"></em></span></div>
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+<!-- ============ 导航 ============ -->
+<header class="nav" id="nav">
+  <a class="nav-logo" href="#top" aria-label="金丽娜 · 回到开头"><span class="nav-seal">金</span><span class="nav-name">金丽娜</span></a>
+  <nav class="nav-links" aria-label="主导航">
+    <a href="#intro">人物</a>
+    <a href="#works">作品</a>
+    <a href="#field">现场</a>
+    <a href="#slate">打一板</a>
+    <a href="#writing">文字</a>
+    <a href="#honors">荣誉</a>
+    <a href="#gallery">影像</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="menu"><span></span><span></span><b>菜单</b></button>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <nav aria-label="全屏菜单">
+    <a href="#intro"><i>01</i>人物</a>
+    <a href="#roles"><i>02</i>身份</a>
+    <a href="#works"><i>03</i>作品</a>
+    <a href="#field"><i>04</i>现场</a>
+    <a href="#slate"><i>05</i>打一板</a>
+    <a href="#writing"><i>06</i>文字</a>
+    <a href="#honors"><i>07</i>荣誉</a>
+    <a href="#gallery"><i>08</i>影像</a>
+    <a href="#sources"><i>09</i>出处</a>
+  </nav>
+</div>
+
+<main>
+
+  <!-- ============ 首屏 ============ -->
+  <section class="hero" id="top" aria-label="首页">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-rec" aria-hidden="true"><i></i>REC <span id="heroTc">00:00:00:00</span></div>
+
+    <figure class="hero-photo" id="heroPhoto">
+      <div class="hp-frame" id="hpFrame" data-cursor="显影">
+        <img class="hp-bw" src="images/portrait.jpg" width="413" height="416" alt="金丽娜肖像">
+        <img class="hp-color" src="images/portrait.jpg" width="413" height="416" alt="" aria-hidden="true">
+        <span class="hp-glare" aria-hidden="true"></span>
+      </div>
+      <figcaption class="hp-hint"><span class="hint-desk">移动鼠标显影 · 点击全部显影</span><span class="hint-touch">点一下照片，给它显影</span></figcaption>
+      <svg class="hero-badge" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="badgePath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+        <text><textPath href="#badgePath">记者 · 作家 · 编导 · JIN LINA · CCTV-7 · 军事纪实 ·</textPath></text>
+        <path class="badge-star" d="M100 78 L106 94 L122 100 L106 106 L100 122 L94 106 L78 100 L94 94 Z"/>
+      </svg>
+    </figure>
+
+    <h1 class="hero-name" aria-label="金丽娜"><span class="hn-c"><span>金</span></span><span class="hn-c"><span>丽</span></span><span class="hn-c"><span>娜</span></span></h1>
+
+    <div class="hero-meta hero-meta-l">
+      <p class="eyebrow">CCTV-7《军事纪实》</p>
+      <p class="hero-role">纪录片导演<i>/</i>记者<i>/</i>作家</p>
+    </div>
+    <div class="hero-meta hero-meta-r">
+      <p class="hero-tagline">在边防线上拍下坚守，<br>也在稿纸上写下爱情。</p>
+      <p class="hero-tap">↑ 点一下照片，给它显影</p>
+    </div>
+    <a class="hero-scroll" href="#intro" aria-label="向下滚动"><span>开始放映</span><i></i></a>
+  </section>
+
+  <!-- ============ 滚动字幕带 ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="mq-track" id="mqTrack">
+      <span>纪录片导演</span><i>✦</i><span>记者</span><i>✦</i><span>作家</span><i>✦</i><span>《军事纪实》</span><i>✦</i><span>走边关</span><i>✦</i><span>永远的雷锋</span><i>✦</i><span>因为爱情</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- ============ 01 人物 ============ -->
+  <section class="intro" id="intro">
+    <div class="wrap">
+      <p class="sec-label" data-anim><i>01</i>人物</p>
+      <p class="intro-text" id="introText">2006 年，她从黑龙江电台的直播间走进央视。此后十几年，她把镜头对准集训场、海疆与边关，也把听来的故事，一个个写进了书里。</p>
+
+      <div class="intro-grid">
+        <figure class="intro-photo" data-anim>
+          <div class="ip-img" data-cursor="放大" data-gallery="launch"><img src="images/launch-2023.jpg" width="1269" height="847" loading="lazy" decoding="async" alt="金丽娜在《微风吹过“撒欢谷”》发布会上发言"></div>
+          <figcaption>2023 年 5 月 · 《微风吹过“撒欢谷”》发布会 <span>图源：央广网（主办方供图）</span></figcaption>
+        </figure>
+        <div class="intro-body">
+          <p class="intro-lead" data-anim>金丽娜，毕业于中国传媒大学，CCTV-7《军事纪实》纪录片编导、主编。</p>
+          <p data-anim>进入央视之前，她是黑龙江电台情感节目的主持人，温婉知性的声音陪伴了很多夜晚。2006 年进入央视后，她一直在军事报道一线：拍过奥运安保的狙击手集训队，走过海军六十年的海疆，也在零下三十多度的内蒙古边防线上跟着战士巡逻。</p>
+          <p data-anim>她还写书。2013 年出版的散文集《因为爱情》，最后一章叫作“边防线上的爱情”。近年来，她执导了两部教育公益电影，把镜头转向校园和孩子们的心事。</p>
+          <ul class="intro-stats">
+            <li data-anim><b class="count" data-to="2006">2006</b><span>进入央视</span></li>
+            <li data-anim><b><span class="count" data-to="17">17</span><em>年</em></b><span>导演生涯（截至 2023）</span></li>
+            <li data-anim><b><span class="count" data-to="2">2</span><em>次</em></b><span>“中国十大纪录片导演”</span></li>
+            <li data-anim><b><span class="count" data-to="3">3</span><em>部</em></b><span>出版著作</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 身份 ============ -->
+  <section class="roles" id="roles">
+    <div class="wrap">
+      <p class="sec-label" data-anim><i>02</i>身份</p>
+      <h2 class="sec-title" data-anim>一个人，<em>四种</em>讲故事的方式</h2>
+      <p class="sec-sub" data-anim>把鼠标移到卡片上（手机上点一下），看看每一种身份。</p>
+    </div>
+    <div class="roles-panels" id="rolesPanels">
+      <article class="role-panel is-open" tabindex="0" data-cursor="展开">
+        <div class="rp-bg rp-bg-field" aria-hidden="true"></div>
+        <span class="rp-num">01</span>
+        <h3 class="rp-vt">记者</h3>
+        <div class="rp-content">
+          <p class="rp-en">Reporter</p>
+          <h3 class="rp-title">记者</h3>
+          <p>2006 年进入央视后，一直在军事报道一线。奥运安保的集训场、海军的十几个驻地、内蒙古的边防哨所，都是她的现场。</p>
+          <a class="rp-link" href="#field">去现场 →</a>
+        </div>
+      </article>
+      <article class="role-panel" tabindex="0" data-cursor="展开">
+        <div class="rp-bg rp-bg-img" style="background-image:url(images/launch-2023.jpg)" aria-hidden="true"></div>
+        <span class="rp-num">02</span>
+        <h3 class="rp-vt">编导</h3>
+        <div class="rp-content">
+          <p class="rp-en">Director</p>
+          <h3 class="rp-title">编导</h3>
+          <p>《军事纪实》纪录片编导、主编。据其个人介绍，曾数十次担任央视大型文献纪录片执行总导演，两次获得“中国十大纪录片导演”称号。</p>
+          <a class="rp-link" href="#works">看作品 →</a>
+        </div>
+      </article>
+      <article class="role-panel" tabindex="0" data-cursor="展开">
+        <div class="rp-bg rp-bg-img rp-bg-book" style="background-image:url(images/book-cover.jpg)" aria-hidden="true"></div>
+        <span class="rp-num">03</span>
+        <h3 class="rp-vt">作家</h3>
+        <div class="rp-content">
+          <p class="rp-en">Writer</p>
+          <h3 class="rp-title">作家</h3>
+          <p>出版散文集《因为爱情》、小说《好久不见》、报告文学《当兵的那一天》，把十几年里见过、听过的故事写进书里。</p>
+          <a class="rp-link" href="#writing">翻开书 →</a>
+        </div>
+      </article>
+      <article class="role-panel" tabindex="0" data-cursor="展开">
+        <div class="rp-bg rp-bg-voice" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <span class="rp-num">04</span>
+        <h3 class="rp-vt">主持人</h3>
+        <div class="rp-content">
+          <p class="rp-en">Radio Host · 前传</p>
+          <h3 class="rp-title">主持人</h3>
+          <p>进入央视之前，她主持黑龙江电台情感节目《华灯初上》《你的故事我的歌》《一路有你》，连续三年获评交通广播最受欢迎的电台节目主持人。</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 03 作品 ============ -->
+  <section class="works" id="works">
+    <div class="works-pin" id="worksPin">
+      <div class="works-head wrap">
+        <div>
+          <p class="sec-label"><i>03</i>作品</p>
+          <h2 class="sec-title">十三部作品，<em>一卷胶片</em></h2>
+        </div>
+        <p class="works-hint"><span class="hint-desk">继续向下滚动，胶片会向左走</span><span class="hint-touch">左右滑动胶片</span> · 点任意一格看详情</p>
+      </div>
+      <div class="works-viewport" id="worksViewport">
+        <div class="works-track" id="worksTrack"></div>
+      </div>
+      <div class="works-foot wrap">
+        <div class="works-bar"><i id="worksBar"></i></div>
+        <span class="works-year" id="worksYear">2007</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 现场 ============ -->
+  <section class="field" id="field">
+    <canvas class="snow" id="snow" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <p class="sec-label" data-anim><i>04</i>现场</p>
+      <h2 class="sec-title" data-anim>八千里<em>边防线</em></h2>
+      <p class="sec-sub" data-anim>2012 年冬，《走边关》摄制组自西向东，沿内蒙古边防线拍摄。往下滚动，跟着他们走一遍；移动鼠标，风会吹动雪。</p>
+      <div class="field-grid">
+        <div class="field-map-wrap"><div class="field-map" id="fieldMap"></div><p class="map-note">示意图 · 站点按盟市驻地近似标注 · 据解放军报 2012 年 12 月报道整理</p></div>
+        <ol class="field-notes" id="fieldNotes"></ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 打一板 ============ -->
+  <section class="slate-sec" id="slate">
+    <div class="wrap slate-grid">
+      <div class="slate-copy">
+        <p class="sec-label" data-anim><i>05</i>片场</p>
+        <h2 class="sec-title" data-anim>来，<em>打一板</em></h2>
+        <p class="sec-sub" data-anim>每打一板，解锁一个她的真实故事。一共 14 个，看你能不能集齐。</p>
+        <div class="slate-collect" id="slateCollect" aria-hidden="true"></div>
+        <p class="slate-count"><b id="slateCount">0</b> / 14 已解锁</p>
+        <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="true">声音 · 开</button>
+      </div>
+      <div class="slate-stage">
+        <button class="clapper" id="clapper" type="button" data-cursor="打板" aria-label="打板，解锁下一个故事">
+          <span class="clap-stick" id="clapStick"><span class="clap-stick-in"></span></span>
+          <span class="clap-hinge"></span>
+          <span class="clap-board">
+            <span class="cb-row cb-title"><b>片名</b><i>金丽娜</i></span>
+            <span class="cb-grid">
+              <span><b>场次</b><i id="cbScene">00</i></span>
+              <span><b>镜次</b><i id="cbShot">00</i></span>
+              <span><b>条次</b><i id="cbTake">1</i></span>
+            </span>
+            <span class="cb-row"><b>导演</b><i class="cb-you">你</i></span>
+            <span class="cb-row cb-date"><b>日期</b><i id="cbDate">—</i></span>
+          </span>
+        </button>
+        <div class="slate-card" id="slateCard" aria-live="polite">
+          <p class="sc-k" id="scK">点一下场记板，开拍</p>
+          <p class="sc-text" id="scText">第一板，从 2006 年以前说起。</p>
+          <p class="sc-src" id="scSrc"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 文字 ============ -->
+  <section class="writing" id="writing">
+    <div class="wrap">
+      <p class="sec-label" data-anim><i>06</i>文字</p>
+      <h2 class="sec-title" data-anim>稿纸上的<em>爱情</em></h2>
+      <div class="book-grid">
+        <div class="book-stage" id="bookStage" data-cursor="拖动">
+          <div class="book3d" id="book3d">
+            <div class="b-face b-front"><img src="images/book-cover.jpg" width="568" height="800" loading="lazy" decoding="async" alt="散文集《因为爱情》封面"></div>
+            <div class="b-face b-back"><p>散文集<br>因为爱情</p><span>金丽娜 著 · 中国长安出版社</span></div>
+            <div class="b-face b-spine"><span>因为爱情</span><em>金丽娜 著</em></div>
+            <div class="b-face b-pages"></div>
+            <div class="b-face b-top"></div>
+            <div class="b-face b-bottom"></div>
+          </div>
+          <p class="book-hint">按住拖动，转一转这本书</p>
+        </div>
+        <div class="book-info">
+          <p class="eyebrow" data-anim>散文集 · 2013 · 中国长安出版社</p>
+          <h3 class="book-title" data-anim>《因为爱情》</h3>
+          <p data-anim>一本记录爱情故事的散文集。以作者十几年的工作经历为背景，写下所见所闻的情感故事——有凄美，有感伤，有温暖，也有一点遗憾。</p>
+          <ol class="toc" id="toc"></ol>
+          <p class="book-specs" data-anim>308 页 · 平装 · ISBN 978-7-5107-0574-8 · 定价 36.00 元<br>推荐：军旅音乐人小曾、央视军事节目中心专题部主任魏纪奎</p>
+          <div class="other-books" data-anim>
+            <button type="button" class="ob" data-work="haojiu" data-cursor="查看"><i>小说</i>《好久不见》</button>
+            <button type="button" class="ob" data-work="dangbing" data-cursor="查看"><i>报告文学</i>《当兵的那一天》</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="postcard" id="postcard">
+        <div class="pc-head">
+          <h3 class="pc-title" data-anim>在稿纸上，写一句话给她</h3>
+          <p class="pc-sub" data-anim>输入一句话（最多 40 字），会一格一格写进稿纸，然后生成一张可以保存的明信片。</p>
+        </div>
+        <div class="pc-paper" id="pcPaper" data-cursor="写字"><div class="pc-grid" id="pcGrid"></div></div>
+        <div class="pc-form">
+          <label class="pc-field pc-msg"><span>想说的话</span><input id="pcInput" maxlength="40" autocomplete="off" placeholder="比如：谢谢你把边关的故事讲给我们听"></label>
+          <label class="pc-field pc-name"><span>署名</span><input id="pcName" maxlength="12" autocomplete="off" placeholder="可不填"></label>
+          <button class="btn btn-gold" id="pcMake" type="button">生成明信片</button>
+        </div>
+        <div class="pc-result" id="pcResult" hidden>
+          <img id="pcImg" alt="你生成的明信片">
+          <div class="pc-result-actions">
+            <a class="btn btn-gold" id="pcDownload" download="写给金丽娜的明信片.png" href="#">保存图片</a>
+            <span class="pc-tip">手机上可以长按图片保存</span>
+          </div>
+        </div>
+        <canvas id="pcCanvas" width="1500" height="1000" hidden></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 07 荣誉 ============ -->
+  <section class="honors" id="honors">
+    <div class="honors-marquee" aria-hidden="true">
+      <div class="hm-row"><div class="hm-track" id="hmRow1"></div></div>
+      <div class="hm-row hm-rev"><div class="hm-track" id="hmRow2"></div></div>
+    </div>
+    <div class="wrap">
+      <p class="sec-label" data-anim><i>07</i>荣誉</p>
+      <h2 class="sec-title" data-anim>被看见的<em>镜头</em></h2>
+      <div class="titles" id="titles"></div>
+      <ol class="award-list" id="awardList"></ol>
+      <p class="award-note">年份为作品年份 · 点任意一行查看作品</p>
+    </div>
+  </section>
+
+  <!-- ============ 引语 ============ -->
+  <section class="quote" aria-label="引语">
+    <div class="wrap">
+      <p class="quote-text" id="quoteText">“这是我从事导演工作17年来最深刻的一次拍摄。”</p>
+      <p class="quote-src">—— 金丽娜，2023 年 5 月，《微风吹过“撒欢谷”》发布会（据央广网报道）</p>
+    </div>
+  </section>
+
+  <!-- ============ 08 影像 ============ -->
+  <section class="gallery" id="gallery">
+    <div class="wrap">
+      <p class="sec-label" data-anim><i>08</i>影像</p>
+      <h2 class="sec-title" data-anim>镜头之外</h2>
+      <div class="gal-grid" id="galGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ 09 出处 ============ -->
+  <section class="sources" id="sources">
+    <div class="wrap">
+      <p class="sec-label" data-anim><i>09</i>出处</p>
+      <h2 class="sec-title" data-anim>资料与图片来源</h2>
+      <p class="sec-sub" data-anim>本页文字与图片整理自以下公开报道，图片版权归原作者所有。作品署名、年份与奖项名称，以本人及权威发布为准。</p>
+      <ul class="src-list" id="srcList"></ul>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="footer">
+  <p class="ft-big" aria-hidden="true">金丽娜</p>
+  <p class="ft-line">纪录片导演 · 记者 · 作家</p>
+  <div class="ft-contact" id="ftContact" hidden></div>
+  <div class="ft-row">
+    <a class="ft-top" href="#top" data-cursor="重播">↑ 回到开头</a>
+    <p>本页内容整理自公开报道 · 图片版权归原作者所有</p>
+  </div>
+</footer>
+
+<!-- 作品详情 -->
+<dialog class="modal" id="modal" aria-labelledby="mTitle">
+  <div class="m-inner">
+    <div class="m-poster" id="mPoster"></div>
+    <div class="m-body">
+      <p class="m-k" id="mK"></p>
+      <h3 class="m-title" id="mTitle"></h3>
+      <p class="m-meta" id="mMeta"></p>
+      <div class="m-text" id="mText"></div>
+      <div class="m-awards" id="mAwards"></div>
+      <p class="m-src" id="mSrc"></p>
+      <div class="m-nav">
+        <button type="button" id="mPrev" data-cursor="上一部">← 上一部</button>
+        <span id="mCount"></span>
+        <button type="button" id="mNext" data-cursor="下一部">下一部 →</button>
+      </div>
+    </div>
+    <button class="m-close" id="mClose" type="button" aria-label="关闭">×</button>
+  </div>
+</dialog>
+
+<!-- 看大图 -->
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="查看大图">
+  <button class="lb-close" id="lbClose" type="button" aria-label="关闭">×</button>
+  <button class="lb-prev" id="lbPrev" type="button" aria-label="上一张">‹</button>
+  <figure class="lb-fig"><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="lb-next" id="lbNext" type="button" aria-label="下一张">›</button>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><style>.loader{display:none}</style></noscript>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
